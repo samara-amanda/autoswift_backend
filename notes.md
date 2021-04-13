@@ -1,26 +1,16 @@
-Models:
+
 
 - User
-has_many :cars
-has_many :cars, through: :orders
-has_many :orders
+has many :cars
 - name
 - email
-- address
-- password_digest
-
+- password 
 
 - Car
-belongs_to :user
+has many :users
 - brand
 - model
 - year 
-- color
 - price
 - image_url
-
-- Order
-belongs_to :user
-belongs_to :car
-- car_id
-- user_id 
+- user_id

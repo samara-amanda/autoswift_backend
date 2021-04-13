@@ -1,3 +1,4 @@
 class User < ApplicationRecord
-    has_many :cars
+    has_many :transactions
+    has_many :cars, through: :transactions
 end

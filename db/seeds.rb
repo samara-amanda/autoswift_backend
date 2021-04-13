@@ -10,3 +10,4 @@ cassie = User.create(name: "Cassie")
 shane = User.create(name: "Shane")
 
 Car.create(brand:"BMW", model: "M3", year: 2016, price: 65000.00, image_url: "https://cdn.bmwblog.com/wp-content/uploads/2018/08/Atlantis-Blue-BMW-F80-M3-With-HRE-R101LW-Wheels-Image-7.jpg", user_id: foreign.id)
+
