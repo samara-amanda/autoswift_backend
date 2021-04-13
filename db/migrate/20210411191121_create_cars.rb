@@ -6,7 +6,7 @@ class CreateCars < ActiveRecord::Migration[6.0]
       t.integer :year
       t.float :price
       t.string :image_url
-      t.integer :user_id
+      t.references :user
 
       t.timestamps
     end
