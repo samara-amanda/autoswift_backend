@@ -16,23 +16,24 @@ class Api::V1::CarsController < ApplicationController
             render json: CarSerializer.new(car), status: :accepted
             #allows us to send status code with our fetch request. 
         else
-            render json: {errors: car.errors.full_messages}, status: :unprocessible_entity
+            render json: {error: "Oops"}
+            
         end
     end
 
     def update
         car = Car.find_by_id(params[:id])
-        if car.save
+        if car.update(car_params)
             render json: CarSerializer.new(car)
         else
-            render json: {error: "could not save"}
+            render json: {error: "Could not save"}
         end
     end
 
     def destroy
         car = Car.find_by_id(params[:id])
         car.destroy
-        render json: {message: `successfully deleted ${car.brand}`}
+        render json: {message: `Successfully deleted ${car.brand}`}
     end
 
     private
