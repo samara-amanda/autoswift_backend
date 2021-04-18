@@ -33,7 +33,7 @@ class Api::V1::CarsController < ApplicationController
     def destroy
         car = Car.find_by_id(params[:id])
         car.destroy
-        render json: {message: `Successfully deleted ${car.brand}`}
+        render json: {message: "Successfully deleted #{car.year} #{car.brand} #{car.model}!"}
     end
 
     private
