@@ -5,6 +5,11 @@ class Api::V1::CarsController < ApplicationController
         render json: CarSerializer.new(cars)
     end
 
+    def show
+        car = Car.find_by_id(params[:id])
+        render json: CarSerializer.new(car)
+    end
+
     def create
         car = Car.new(car_params)
         if car.save
@@ -13,6 +18,21 @@ class Api::V1::CarsController < ApplicationController
         else
             render json: {errors: car.errors.full_messages}, status: :unprocessible_entity
         end
+    end
+
+    def update
+        car = Car.find_by_id(params[:id])
+        if car.save
+            render json: CarSerializer.new(car)
+        else
+            render json: {error: "could not save"}
+        end
+    end
+
+    def destroy
+        car = Car.find_by_id(params[:id])
+        car.destroy
+        render json: {message: `successfully deleted ${car.brand}`}
     end
 
     private
