@@ -13,11 +13,14 @@ cassie = User.create(name: "Cassie", email: "cassie2021@gmail.com")
 cameron = User.create(name: "Cameron", email: "cameron@aol.com")
 
 
+
+Car.create(brand:"Audi", model: "R8", year: 2017, price: 175000.00, image_url: "https://www.audi-sport.net/xf/attachments/a-merlin-r8-v10-plus-jpg.112340/", user_id: amanda.id)
+
 Car.create(brand:"BMW", model: "M3", year: 2016, price: 65000.00, image_url: "https://cdn.bmwblog.com/wp-content/uploads/2018/08/Atlantis-Blue-BMW-F80-M3-With-HRE-R101LW-Wheels-Image-7.jpg", user_id: amanda.id)
 
-Car.create(brand:"Audi", model: "R8", year: 2017, price: 175000.00, image_url: "https://i.pinimg.com/564x/95/91/58/959158ffb0c3ed118b0beb6d96767967.jpg", user_id: amanda.id)
-
 Car.create(brand:"Nissan", model: "Rogue", year: 2021, price: 40000.00, image_url: "https://media.ed.edmunds-media.com/nissan/rogue/2021/oem/2021_nissan_rogue_4dr-suv_platinum_fq_oem_8_1600.jpg", user_id: cassie.id)
+
+Car.create(brand:"Lamborghini", model: "Urus", year: 2021, price: 205000.00, image_url: "https://www.carscoops.com/wp-content/uploads/2019/02/04118fda-pink-lamborghini-urus-kahn-tuning.jpg", user_id: amanda.id)
 
 Car.create(brand:"Honda", model: "Accord", year: 2018, price: 15000.00, image_url: "https://cars.usnews.com/static/images/Auto/izmo/i55706567/2018_honda_accord_angularfront.jpg", user_id: amanda.id)
 
