@@ -5,18 +5,13 @@ class Api::V1::CarsController < ApplicationController
         render json: CarSerializer.new(cars)
     end
 
-    def show
-        car = Car.find_by_id(params[:id])
-        render json: CarSerializer.new(car)
-    end
-
     def create
         car = Car.new(car_params)
         if car.save
             render json: CarSerializer.new(car), status: :accepted
             #allows us to send status code with our fetch request. 
         else
-            render json: {error: "Oops"}
+            render json: {errors: syllabus.errors.full_messages}, status: :unprocessible_entity
             
         end
     end
