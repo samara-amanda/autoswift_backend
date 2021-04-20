@@ -11,7 +11,7 @@ class Api::V1::CarsController < ApplicationController
             render json: CarSerializer.new(car), status: :accepted
             #allows us to send status code with our fetch request. 
         else
-            render json: {errors: syllabus.errors.full_messages}, status: :unprocessible_entity
+            render json: {errors: car.errors.full_messages}
             
         end
     end
