@@ -106,7 +106,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.14.2-arm64-darwin)
+    nokogiri (1.14.3-arm64-darwin)
       racc (~> 1.4)
     pg (1.4.6)
     pry (0.14.2)
@@ -167,6 +167,7 @@ GEM
     timeout (0.3.2)
     tzinfo (1.2.11)
       thread_safe (~> 0.1)
+    uri (0.12.1)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -190,6 +191,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
+  uri
 
 RUBY VERSION
    ruby 3.0.0p0
