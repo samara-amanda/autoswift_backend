@@ -9,6 +9,8 @@ gem 'shutup'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.6'
 # Use postgresql as the database for Active Record
 gem 'pg'
+
+gem 'psych', '< 4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 
