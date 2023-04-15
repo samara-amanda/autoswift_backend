@@ -2,6 +2,7 @@ databases:
   - name: autoswift_backend
     databaseName: autoswift_backend
     user: autoswift_backend
+    plan: free
 
 services:
   - type: web
