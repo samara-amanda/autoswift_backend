@@ -80,8 +80,6 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
-  
-  # database: autoswift_backend_production
-  # username: autoswift_backend
-  # password: <%= ENV['AUTOSWIFT_BACKEND_DATABASE_PASSWORD'] %>
+  database: autoswift_backend_production
+  username: autoswift_backend
+  password: <%= ENV['AUTOSWIFT_BACKEND_DATABASE_PASSWORD'] %>
