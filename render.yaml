@@ -1,18 +1,19 @@
 databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
+  - name: autoswift_backend
+    databaseName: autoswift_backend
+    user: autoswift_backend
 
 services:
   - type: web
-    name: mysite
+    name: autoswift_backend
     env: ruby
+    plan: free
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mysite
+          name: autoswift_backend
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
