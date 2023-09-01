@@ -16,7 +16,7 @@ cameron = User.create(name: "Cameron", email: "cameron@aol.com")
 
 Car.create(brand:"Audi", model: "R8", year: 2017, price: 175000.00, image_url: "https://www.audi-sport.net/xf/attachments/a-merlin-r8-v10-plus-jpg.112340/", user_id: amanda.id)
 
-Car.create(brand:"BMW", model: "M3", year: 2016, price: 65000.00, image_url: "https://cdn.bmwblog.com/wp-content/uploads/2018/08/Atlantis-Blue-BMW-F80-M3-With-HRE-R101LW-Wheels-Image-7.jpg", user_id: amanda.id)
+Car.create(brand:"BMW", model: "M3", year: 2016, price: 65000.00, image_url: "https://www.modecarbon.com/wp-content/uploads/2021/05/51119518146_8816e30a30_o.jpg", user_id: amanda.id)
 
 Car.create(brand:"Nissan", model: "Rogue", year: 2021, price: 40000.00, image_url: "https://media.ed.edmunds-media.com/nissan/rogue/2021/oem/2021_nissan_rogue_4dr-suv_platinum_fq_oem_8_1600.jpg", user_id: cassie.id)
 
